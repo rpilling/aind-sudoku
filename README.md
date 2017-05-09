@@ -3,11 +3,22 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+
+The naked twins strategy identifies two squares in the same unit which both contain two digits that are the same (also known as twin pair). 
+
+By eliminating the twin pair from all other squares in the unit(s), the naked twin strategy constraints that except from the naked twin squares no other squares can contain a twin digit. 
+
+Taking the unit squares { 'A5': '26', 'A6': '26', ... }, as an example, we can conclude that 2 and 6 must be in A5 and A6, and we can therefore eliminate 2 and 6 from every other square in the A row unit. 
+
+By repetitively applying the eliminate and naked_twins functions, we use constraint propagation to reduce the search space of our Sudoku puzzle. 
+
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+
+The Diagonal Sudoku problem extends the Sudoku problem by introducing two additional diagonal units {A1, … , I9} and {I1, … , A9} with the same unit constraints as the regular Sudoku problem. 
+
+To solve the Diagonal Sudoku we hence apply the same solution techniques of elimination, only_choice and naked_twins to the Sudoku puzzle in order to reduce the search space for finding a solution to the Diagonal Sudoku problem. 
 
 ### Install
 
